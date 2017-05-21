@@ -41,9 +41,9 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-2" for="pwd">Password:</label>
+          <label class="control-label col-sm-2" for="jns_klmd">Jenis Kelamin:</label>
           <div class="col-sm-6">          
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            <input type="password" class="form-control" id="jns_klm" placeholder="Jenis Kelamin" name="jns_klm">
           </div>
         </div>
         <div class="form-group">
