@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/mdb.min.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/manualcss.css">
+  <script type="text/javascript" href="<?php echo base_url(); ?>assets/js/manualjs.js"></script>
+  <!--link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/mdb.min.css">
   <script type='text/javascript' src="<?php echo base_url(); ?>assets/js/mdb.min.js"></script>
   <script type='text/javascript' src="<?php echo base_url(); ?>assets/js/tether.min.js"></script>
-  <script type='text/javascript' src="<?php echo base_url(); ?>assets/js/jquery-3.1.1.min.js"></script>
+  <script type='text/javascript' src="<?php echo base_url(); ?>assets/js/jquery-3.1.1.min.js"></script-->
   <script type="text/javascript">
       $(document).ready(function () {
         var url = window.location;
@@ -25,7 +26,7 @@
 
 <body >
 	<div class="jumbotron" style="background-color: #1a78c2; padding: 10px; margin: 0">
-		<img src="<?php echo base_url(); ?>assets/image/logosbmptn.gif" >
+		<img src="<?php echo base_url('assets/image/logosbmptn.gif'); ?>" >
 	</div>
 
 </div>
