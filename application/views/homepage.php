@@ -6,13 +6,13 @@
   </div>
 
   <div class="col-md-6">
-      <p>
+      <p align="center" style="font-size: 50px">
         SELAMAT DATANG
-      </p>
-      <p>
+      </p >
+      <p align="center" style="font-size: 30px">
         DI LAMAN RESMI
       </p>
-      <p>
+      <p align="center" style="font-size: 20px">
         SELEKSI BERSAMA MASUK PERGURUAN TINGGI NEGERI TAHUN 2017
       </p>
   </div>
