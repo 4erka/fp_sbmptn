@@ -13,11 +13,33 @@
         <td style="padding-left: 0px">
          <form>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
-              <input type="text" class="form-control" id="Panlok" placeholder="Panlok" name="Panlok">
+              <!-- <input type="text" class="form-control" id="Panlok" placeholder="Panlok" name="Panlok"> -->
+              <select class="form-control" id="panlok" onChange="cekSubpanlok(this);">
+                <?php 
+                  foreach($panlok as $row)
+                  { 
+                    echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
+                  }
+                ?>
+              </select>
             </div>
 
+            <!-- <script type="text/javascript">
+                function cekSubpanlok(elem) {
+                    document.getElementById('subpanlok').disabled = !elem.selectedIndex;
+                  }
+            </script> -->
+
             <div class="form-group" style="margin-bottom: 0px;"> 
-              <input type="text" class="form-control" id="subPanlok" placeholder="subPanlok (Kabupaten atau Kota)" name="subPanlok">
+              <!-- <input type="text" class="form-control" id="subPanlok" placeholder="subPanlok (Kabupaten atau Kota)" name="subPanlok"> -->
+              <select class="form-control" id="subpanlok">
+                <?php 
+                  foreach($subpanlok as $row)
+                  { 
+                    echo '<option value="'.$row->spl_nama.'">'.$row->spl_nama.'</option>';
+                  }
+                ?>
+              </select>
             </div>
          </form>
         </td>

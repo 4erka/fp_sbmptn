@@ -7,7 +7,7 @@
     <ul class="nav navbar-nav">
       <li><a href="<?php echo site_url('con_homepage') ?>">Halaman utama</a></li>
       <li><a href="<?php echo site_url('con_pageinformasi') ?>">Informasi </a></li>
-      <li><a href="<?php echo site_url('con_pendaftaran') ?>">Pendaftaran</a></li>
+      <li><a href="<?php echo site_url('pendaftaran') ?>">Pendaftaran</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> ADMIN</a></li>
