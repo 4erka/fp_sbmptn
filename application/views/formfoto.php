@@ -11,29 +11,31 @@
 						<div class="col-md-6">
 							<div class="form-group">
     	         	    		<label>Upload Pas Foto</label>
-	             	  		  	<input id="input-1" type="file" style="border-style: solid; border-width: 1px; margin-bottom: 5px">
+    	         	    		<?php echo form_open_multipart('pendaftaran/do_upload/'.$id);?>
+	             	  		  	<input id="input-1" type="file" name="foto_peserta" style="border-style: solid; border-width: 1px; margin-bottom: 5px">
 
         	    		 	    	<button type="button" class="btn btn-primary" >Hapus</button>
-									<button type="button" class="btn btn-primary" >Upload</button>
-							</div>	
+									<button type="submit" class="btn btn-primary" value="upload" >Upload</button>
+								</form>
+							</div>
+							<?php echo $error;?>
 						</div>
 				
 						<div class="col-md-3">
-							<img src="<?php echo base_url(); ?>" />
+							<img src="<?php echo base_url("uploads/".$dir); ?>" />
 						</div>
 					</div>
 				</div>
 			</div>
 
 		
-
 		<div class="col-md-12">
 			<div class="text-center" style="margin-top: 5px;">
 			    
 					<a href="<?php echo site_url('con_pendaftaran') ?>">
 			  			<button type="button" class="btn btn-primary" >sebelumnya</button>
 			  		</a>
-			  		<a href="<?php echo site_url('con_formbiodata') ?>">
+			  		<a href="<?php echo site_url('pendaftaran/form_biodata/'.$id) ?>">
 			  			<button type="button" class="btn btn-primary" >selanjutnya</button>
 			  		</a>
 			  		
