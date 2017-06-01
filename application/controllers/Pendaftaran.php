@@ -151,12 +151,16 @@ class Pendaftaran extends CI_Controller {
         'ps_kebutuhan_khusus' => $ps_kebutuhan_khusus,
         );
         $query = $this->db->insert('peserta', $data);
-        $panlok = $this->db->query('SELECT pl_nama FROM panlok');
-        $subpanlok = $this->db->query('SELECT spl_nama FROM subpanlok');
+        $panlok = $this->db->query('SELECT pl_id, pl_nama FROM panlok ORDER BY pl_id');
+        $subpanlok = $this->db->query('SELECT pl_id, spl_id, spl_nama FROM subpanlok ORDER BY spl_id');
+        $ptn = $this->db->query('SELECT ptn_id, ptn_nama FROM ptn ORDER BY ptn_id');
+        $prodi = $this->db->query('SELECT ptn_id, pro_id, pro_nama FROM prodi ORDER BY ptn_id');
         $ids = array(
                 'id' => $id,
                 'panlok' => $panlok->result(),
-                'subpanlok' => $subpanlok->result()
+                'subpanlok' => $subpanlok->result(),
+                'ptn' => $ptn->result(),
+                'prodi' => $prodi->result()
             );
         if ($query !== FALSE)
         {
