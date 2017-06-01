@@ -154,7 +154,7 @@ class Pendaftaran extends CI_Controller {
         $panlok = $this->db->query('SELECT pl_id, pl_nama FROM panlok ORDER BY pl_id');
         $subpanlok = $this->db->query('SELECT pl_id, spl_id, spl_nama FROM subpanlok ORDER BY spl_id');
         $ptn = $this->db->query('SELECT ptn_id, ptn_nama FROM ptn ORDER BY ptn_id');
-        $prodi = $this->db->query('SELECT ptn_id, pro_id, pro_nama FROM prodi ORDER BY ptn_id');
+        $prodi = $this->db->query('SELECT ptn_id, pro_id, pro_nama, uk_id FROM prodi ORDER BY ptn_id');
         $ids = array(
                 'id' => $id,
                 'panlok' => $panlok->result(),

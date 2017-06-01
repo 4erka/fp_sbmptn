@@ -148,19 +148,19 @@
         <td style="padding-left: 0px">
          <form>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Olahraga<input type="text" class="form-control" id="nama_ptn_olahraga" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga">
+              Ujian Keterampilan Olahraga<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga">
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
-              Ujian Keterampilan Senirupa / Desain<input type="text" class="form-control" id="nama_prodi_senirupa_desain" placeholder="Pilih Program Studi" name="nama_prodi_senirupa_desain">
+              Ujian Keterampilan Senirupa / Desain<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_senirupa_desain">
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Sendratari<input type="text" class="form-control" id="nama_prodi_Sendratari" placeholder="Pilih Program Studi" name="nama_prodi_Sendratari">
+              Ujian Keterampilan Sendratari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_Sendratari">
             </div>
              <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Seni Musik<input type="text" class="form-control" id="nama_prodi_seni_musik" placeholder="Pilih Program Studi" name="nama_prodi_seni_musik">
+              Ujian Keterampilan Seni Musik<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_musik">
             </div>
              <div class="form-group" style="margin-bottom: 0px"> 
-              Ujian Keterampilan Seni Tari<input type="text" class="form-control" id="nama_prodi_seni_tari" placeholder="Pilih Program Studi" name="nama_prodi_seni_tari">
+              Ujian Keterampilan Seni Tari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_tari">
             </div>
          </form>
         </td>
