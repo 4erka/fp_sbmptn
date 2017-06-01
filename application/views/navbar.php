@@ -6,18 +6,28 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="<?php echo site_url('con_homepage') ?>">Halaman utama</a></li>
-      <li><a href="<?php echo site_url('con_pageinformasi') ?>">Informasi </a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informasi
+        <span class="caret"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="<?php echo site_url('con_pageinformasi') ?>">Informasi Umum</a></li>
+          <li><a href="<?php echo site_url('con_daftarptn') ?>">Daftar PTN</a></li>
+          <li><a href="<?php echo site_url('con_daftarptnuk') ?>">Daftar PTN UK</a></li>
+          <li><a href="<?php echo site_url('con_daftarpanlok') ?>">Daftar Panlok</a></li>
+        </ul>
+      </li>
+      
       <li><a href="<?php echo site_url('pendaftaran') ?>">Pendaftaran</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> ADMIN</a></li>
+      <li><a a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> ADMIN</a></li>
     </ul>
   </div>
 </nav>
 
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -42,9 +52,7 @@
                 </div>
 
                 <div class="text-center">
-                <a href="<?php echo site_url('con_admin') ?>">
                   <button class="btn btn-deep-purple">Login</button>
-                </a>
                 </div>
 
               </div>
@@ -59,6 +67,6 @@
         </div>
 
       </div>
-      
+
     </div>
   </div>
