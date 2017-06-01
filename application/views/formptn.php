@@ -14,28 +14,29 @@
          <form>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
               <!-- <input type="text" class="form-control" id="Panlok" placeholder="Panlok" name="Panlok"> -->
-              <select class="form-control">
-              <?php 
-                  foreach($panlok as $pl)
+              <select class="form-control" id="panlok" onChange="cekSubpanlok(this);">
+                <?php 
+                  foreach($panlok as $row)
                   { 
-                    echo '<optgroup label="'.$pl->pl_nama.'">';
-                    $flag = 1;
-                      foreach($subpanlok as $spl)
-                      { 
-                        if($pl->pl_id == $spl->pl_id){
-                          echo '<option value="'.$spl->spl_id.'">'.$spl->spl_nama.'</option>';
-                          $flag=1;
-                        }
-                        else{
-                          $flag = 0;
-                        }
-                      }
-                    if($flag == 0)
-                    {
-                      echo '<option value="'.$pl->pl_id.'">'.$pl->pl_nama.'</option>';
-                    }
-                    echo '</optgroup>';
-                    //echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
+                    echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
+                  }
+                ?>
+              </select>
+            </div>
+
+            <!-- <script type="text/javascript">
+                function cekSubpanlok(elem) {
+                    document.getElementById('subpanlok').disabled = !elem.selectedIndex;
+                  }
+            </script> -->
+
+            <div class="form-group" style="margin-bottom: 0px;"> 
+              <!-- <input type="text" class="form-control" id="subPanlok" placeholder="subPanlok (Kabupaten atau Kota)" name="subPanlok"> -->
+              <select class="form-control" id="subpanlok">
+                <?php 
+                  foreach($subpanlok as $row)
+                  { 
+                    echo '<option value="'.$row->spl_nama.'">'.$row->spl_nama.'</option>';
                   }
                 ?>
               </select>
@@ -52,22 +53,10 @@
         <td style="padding-left: 0px">
          <form>
             <div class="form-group" style="margin-bottom: 0px"> 
-              <select class="form-control">
-              <?php 
-                  foreach($ptn as $row)
-                  { 
-                    echo '<optgroup label="'.$row->ptn_nama.'">';
-                      foreach($prodi as $pro)
-                      { 
-                        if($row->ptn_id == $pro->ptn_id){
-                          echo '<option value="'.$pro->pro_id.'">'.$pro->pro_nama.'</option>';
-                        }
-                      }
-                    echo '</optgroup>';
-                    //echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
-                  }
-                ?>
-              </select>
+              <input type="text" class="form-control" id="nama_ptn" placeholder="Pilih Perguruan tinggi" name="nama_ptn">
+            </div>
+            <div class="form-group" style="margin-bottom: 0px"> 
+              <input type="text" class="form-control" id="nama_prodi" placeholder="Pilih Program Studi" name="nama_prodi">
             </div>
             <div>
               Isi lokasi ujian terlebih dahulu
@@ -84,22 +73,10 @@
         <td style="padding-left: 0px">
          <form>
             <div class="form-group" style="margin-bottom: 0px"> 
-              <select class="form-control">
-              <?php 
-                  foreach($ptn as $row)
-                  { 
-                    echo '<optgroup label="'.$row->ptn_nama.'">';
-                      foreach($prodi as $pro)
-                      { 
-                        if($row->ptn_id == $pro->ptn_id){
-                          echo '<option value="'.$pro->pro_id.'">'.$pro->pro_nama.'</option>';
-                        }
-                      }
-                    echo '</optgroup>';
-                    //echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
-                  }
-                ?>
-              </select>
+              <input type="text" class="form-control" id="nama_ptn" placeholder="Pilih Perguruan tinggi" name="nama_ptn">
+            </div>
+            <div class="form-group" style="margin-bottom: 0px"> 
+              <input type="text" class="form-control" id="nama_prodi" placeholder="Pilih Program Studi" name="nama_prodi">
             </div>
             <div>
               Isi pilihan 1 terlebih dahulu
@@ -116,22 +93,10 @@
         <td style="padding-left: 0px">
          <form>
             <div class="form-group" style="margin-bottom: 0px"> 
-              <select class="form-control">
-              <?php 
-                  foreach($ptn as $row)
-                  { 
-                    echo '<optgroup label="'.$row->ptn_nama.'">';
-                      foreach($prodi as $pro)
-                      { 
-                        if($row->ptn_id == $pro->ptn_id){
-                          echo '<option value="'.$pro->pro_id.'">'.$pro->pro_nama.'</option>';
-                        }
-                      }
-                    echo '</optgroup>';
-                    //echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
-                  }
-                ?>
-              </select>
+              <input type="text" class="form-control" id="nama_ptn" placeholder="Pilih Perguruan tinggi" name="nama_ptn">
+            </div>
+            <div class="form-group" style="margin-bottom: 0px"> 
+              <input type="text" class="form-control" id="nama_prodi" placeholder="Pilih Program Studi" name="nama_prodi">
             </div>
             <div>
               Isi pilihan 2 terlebih dahulu
@@ -148,19 +113,19 @@
         <td style="padding-left: 0px">
          <form>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Olahraga<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga">
+              Ujian Keterampilan Olahraga<input type="text" class="form-control" id="nama_ptn_olahraga" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga" disabled="">
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
-              Ujian Keterampilan Senirupa / Desain<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_senirupa_desain">
+              Ujian Keterampilan Senirupa / Desain<input type="text" class="form-control" id="nama_prodi_senirupa_desain" placeholder="Pilih Program Studi" name="nama_prodi_senirupa_desain">
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Sendratari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_Sendratari">
+              Ujian Keterampilan Sendratari<input type="text" class="form-control" id="nama_prodi_Sendratari" placeholder="Pilih Program Studi" name="nama_prodi_Sendratari">
             </div>
              <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Seni Musik<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_musik">
+              Ujian Keterampilan Seni Musik<input type="text" class="form-control" id="nama_prodi_seni_musik" placeholder="Pilih Program Studi" name="nama_prodi_seni_musik">
             </div>
              <div class="form-group" style="margin-bottom: 0px"> 
-              Ujian Keterampilan Seni Tari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_tari">
+              Ujian Keterampilan Seni Tari<input type="text" class="form-control" id="nama_prodi_seni_tari" placeholder="Pilih Program Studi" name="nama_prodi_seni_tari">
             </div>
          </form>
         </td>
@@ -180,8 +145,7 @@
 
     </table>
   </div>
-
-  
+       
 
   <div class="col-md-12">
       <div class="text-center" style="margin-top: 5px;">
@@ -190,16 +154,11 @@
               <button type="button" class="btn btn-primary" >sebelumnya</button>
             </a>
             <a href="<?php echo site_url('con_formcetak') ?>">
-              <button type="button" class="btn btn-primary" >selesai</button>
+              <button type="button" class="btn btn-primary" >Selesai</button>
             </a>
             
       </div>
       </div>
-
-      
-
-
-
 
     </div>
 </div>
