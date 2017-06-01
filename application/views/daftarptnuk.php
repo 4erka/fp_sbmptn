@@ -1,3 +1,8 @@
+<div class="container-fluid">
+  <div class="row">
+    <h2 align="center">DAFTAR PTN PENYELENGGARA UJIAN KETERAMPILAN</h2>
+<div class="col-md-1"></div>
+<div class="col-md-10">
 <ul class="nav nav-tabs nav-justified">
   <li class="active"><a data-toggle="tab" href="#home">OLAHRAGA</a></li>
   <li><a data-toggle="tab" href="#menu1">SENI RUPA DAN DESAIN</a></li>
@@ -8,9 +13,6 @@
 
 <div class="tab-content">
   <div id="home" class="tab-pane fade in active">
-    <div class="container">
-      <h2>DAFTAR PTN PENYELENGGARA UJIAN KETERAMPILAN</h2>
-      
       <table class="table table-striped">
         <thead>
           <tr>
@@ -29,8 +31,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-
   </div>
   <div id="menu1" class="tab-pane fade">
     <h3>Menu 1</h3>
@@ -41,3 +41,12 @@
     <p>Some content in menu 2.</p>
   </div>
 </div>
+</div>
+</div>
+</div>
+
+
+
+  </div>  
+</div>
+

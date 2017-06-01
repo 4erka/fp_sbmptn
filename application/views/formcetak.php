@@ -1,17 +1,17 @@
-<div class="container" >
-  <div class="col-sm-12" style="background-color:lavender;">
+<div class="container-fluid" >
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3" style="background-color:lavender;">
   <br>
-  <p class="text-center"><img src="http://news.unair.ac.id/wp-content/uploads/2017/04/SBMPTN-17.jpg" class="img-rounded" alt="Cinque Terre" width="1000" height="236"></p>
-  <h1><strong><center>Kartu Peserta SBMPTN</strong></center></h1>
-  <br><br/>
-  <h4><strong> NOMOR PESERTA : </strong></h4>
-  <h4><strong> NAMA DI IJAZAH : </strong></h4>
-  <h4><strong> NAMA DI LEMBAR JAWABAN (LJU) : </strong></h4>
-  <h4><strong> KELOMPOK UJIAN : </strong></h4>
-  <h4><strong> ALAMAT : </strong></h4>
-  <br>
-  <p class="container">
-  <table class="table table-bordered">
+  <p class="text-center"><img src="<?php echo base_url('assets/image/SBMPTN.jpg'); ?>" class="img-rounded" alt="Cinque Terre" width="600" height="125"></p>
+  <h4 style="padding-bottom: 10px"><b><center>Kartu Peserta SBMPTN</b></center></h4>
+  <p style="font-size: 12px;padding: 0px;margin: 0px"><b>NOMOR PESERTA : </b></p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px"><b>NAMA DI IJAZAH : </b></p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px"><b>NAMA DI LEMBAR JAWABAN (LJU) : </b></p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px"><b>KELOMPOK UJIAN : </b></p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px"><b>ALAMAT : </b></p>
+
+  <p class="container-fluid">
+  <table class="table table-bordered" style="font-size: 12px;padding: 0px;margin: 0px">
     <thead>
       <tr>
         <th>HARI & TANGGAL</th>
@@ -19,7 +19,7 @@
         <th>KEGIATAN</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody >
       <tr>
         <td>S</td>
         <td>Doe</td>
@@ -38,33 +38,33 @@
     </tbody>
   </table>
 </p>
-  <br><br/>
-  <h4><strong> PERLENGKAPAN YANG HARUS DIBAWA SAAT UJIAN : </strong></h4>
-  <p class="text-justify">- Kartu Tanda Peserta Ini</p>
-  <p class="text-justify">- Fotokopi Ijazah yang telah dilegalisasi atau tanda lulus asli</p>
-  <p class="text-justify">- Pensil 2B secukupnya,karet penghapus,peraut,pensil (jika diperlukan)</p>
-  <br>
-  <h4><strong> ALAMAT PADA SAAT MENGIKUTI UJIAN (HARUS DIISI) :</strong></h4>
-  <p class="text-justify">- ALAMAT :</p>
-  <p class="text-justify">- TELEPON :</p>
-  <br>
-  <h4><strong>PILIHAN PROGRAM STUDI :</strong></h4>
-  <p class="text-justify"><strong>1. UNIVERSITAS NEGERI SURABAYA</strong></p>
-  <p class="text-justify">502131 - P. SENI RUPA</p>
-  <p class="text-justify"><strong>2. UNIVERSITAS NEGERI SURABAYA</strong></p>
-  <p class="text-justify">502242 - P. JASMANI,KESEHATAN DAN REKREASI</p>
-  <p class="text-justify"><strong>3. UNIVERSITAS NEGERI MALANG</strong></p>
-    <p class="text-justify">502242 - P. JASMANI,KESEHATAN DAN REKREASI</p>
+  <h6><strong> PERLENGKAPAN YANG HARUS DIBAWA SAAT UJIAN : </strong></h6>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">- Kartu Tanda Peserta Ini</p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">- Fotokopi Ijazah yang telah dilegalisasi atau tanda lulus asli</p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">- Pensil 2B secukupnya,karet penghapus,peraut,pensil (jika diperlukan)</p>
+  
+  <h6><strong> ALAMAT PADA SAAT MENGIKUTI UJIAN (HARUS DIISI) :</strong></h6>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">- ALAMAT :</p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">- TELEPON :</p>
+  
+  <h6><strong>PILIHAN PROGRAM STUDI :</strong></h6>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify"><strong>1. UNIVERSITAS NEGERI SURABAYA</strong></p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">502131 - P. SENI RUPA</p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify"><strong>2. UNIVERSITAS NEGERI SURABAYA</strong></p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">502242 - P. JASMANI,KESEHATAN DAN REKREASI</p>
+  <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify"><strong>3. UNIVERSITAS NEGERI MALANG</strong></p>
+    <p style="font-size: 12px";padding: 0px;margin: 0px class="text-justify">502242 - P. JASMANI,KESEHATAN DAN REKREASI</p>
+  
+    <h5><strong>LOKASI UJIAN :</strong></h5>
+    <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">- Sektor :</p>
+    <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">- Lokasi :</p>
+    <p style="font-size: 12px;padding: 0px;margin: 0px" class="text-justify">- Ruang :</p>
     <br>
-    <h4><strong>LOKASI UJIAN :</strong></h4>
-    <p class="text-justify">- Sektor :</p>
-    <p class="text-justify">- Lokasi :</p>
-    <p class="text-justify">- Ruang :</p>
-    <br>
-    <h4><strong>PERNYATAAN :
-DENGAN INI SAYA MENYATAKAN BAHWA DATA YANG SAYA ISIKAN DALAM PENDAFTARAN ONLINE SBMPTN TAHUN 2017 ADALAH BENAR. SAYA BERSEDIA MENERIMA SANKSI PEMBATALAN PENERIMAAN DI PTN YANG SAYA PILIH APABILA MELANGGAR PERNYATAAN INI</strong></h4>
-<br>
-<h3><strong>TANDA TANGAN DAN NAMA TERANG : </strong></h3><br><br/>
-<br><br/>
+    <p style="font-size: 12px;padding: 0px;margin: 0px"><b>PERNYATAAN :
+DENGAN INI SAYA MENYATAKAN BAHWA DATA YANG SAYA ISIKAN DALAM PENDAFTARAN ONLINE SBMPTN TAHUN 2017 ADALAH BENAR. SAYA BERSEDIA MENERIMA SANKSI PEMBATALAN PENERIMAAN DI PTN YANG SAYA PILIH APABILA MELANGGAR PERNYATAAN INI</b></p>
+<h5><strong>TANDA TANGAN DAN NAMA TERANG : </strong></h5><br><br/>
 </div>
 </div>
+	
+</div>
+  
