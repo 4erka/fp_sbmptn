@@ -5,7 +5,7 @@
       <a class="navbar-brand" href="<?php echo site_url('con_homepage') ?>">SBMPTN 2017</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="<?php echo site_url('con_admin') ?>">Daftar Peserta</a></li>
+      <li><a href="<?php echo site_url('con_daftarpesertaadmin') ?>">Daftar Peserta</a></li>
       <li><a href="<?php echo site_url('con_daftarpanlokadmin') ?>">Daftar Panlok </a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
