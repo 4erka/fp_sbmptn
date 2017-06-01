@@ -43,24 +43,24 @@
 
                 <div class="md-form">
                     <i class="fa fa-envelope prefix"></i>
-                    <input type="text" id="form2" class="form-control" placeholder="Username">
+                    <input type="text"  name="userid" class="form-control" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" >
                 </div>
 
                 <div class="md-form">
                     <i class="fa fa-lock prefix"></i>
-                    <input type="password" id="form4" class="form-control" placeholder="Password">
+                    <input type="password"  name="pswrd" class="form-control" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
                 </div>
 
                 <div class="text-center">
-                  <button class="btn btn-deep-purple">Login</button>
+                  <button class="btn btn-deep-purple" onclick="check(this.form)" type="submit"> Login</button>
                 </div>
 
               </div>
 
-              <div class="modal-footer">
+              <!--div class="modal-footer">
                     <div class="options">
                       <p>Lupa Password <a href="#">Password?</a></p>
-                    </div>
+                    </div-->
                 </div>
               </div>
 
@@ -70,3 +70,4 @@
 
     </div>
   </div>
+
