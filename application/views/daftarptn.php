@@ -34,8 +34,29 @@
 
   </div>
   <div id="menu1" class="tab-pane fade">
-    <h3>Menu 1</h3>
-    <p>Some content in menu 1.</p>
+    <div class="container">
+      <h2>DAFTAR PTN DAN PANLOK</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>KODE</th>
+            <th>NAMA</th>
+            <th>PRODI</th>
+            <th>WILAYAH</th>
+            <th>PANLOK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>10</td>
+            <td>ISBI ACEH (http://www.isbiaceh.ac.id/)</td>
+            <td><button type="button" class="btn btn-info">Lihat Profil</button></td>
+            <td>1</td>
+            <td>11 - BANDA ACEH</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div id="menu2" class="tab-pane fade">
     <h3>Menu 2</h3>
