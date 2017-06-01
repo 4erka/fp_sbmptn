@@ -1,15 +1,20 @@
-<ul class="nav nav-tabs nav-justified">
+
+<div class="col-md-6 col-md-offset-3">
+  <ul class="nav nav-tabs nav-justified">
+<h2>DAFTAR PTN DAN PANLOK</h2>
   <li class="active"><a data-toggle="tab" href="#wilayah1">Wilayah 1</a></li>
   <li><a data-toggle="tab" href="#wilayah2">Wilayah 2</a></li>
   <li><a data-toggle="tab" href="#wilayah3">Wilayah 3</a></li>
   <li><a data-toggle="tab" href="#wilayah4">Wilayah 4</a></li>
   <li><a data-toggle="tab" href="#wilayah">Semua Wilayah</a></li>
 </ul>
+</div>
+
 
 <div class="tab-content">
   <div id="wilayah1" class="tab-pane fade in active">
     <div class="container">
-      <h2>DAFTAR PTN DAN PANLOK</h2>
+      
       <table class="table table-striped">
         <thead>
           <tr>
