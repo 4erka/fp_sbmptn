@@ -10,7 +10,7 @@
       <li><a href="<?php echo site_url('pendaftaran') ?>">Pendaftaran</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> ADMIN</a></li>
+      <li><a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> ADMIN</a></li>
     </ul>
   </div>
 </nav>
@@ -42,7 +42,9 @@
                 </div>
 
                 <div class="text-center">
+                <a href="<?php echo site_url('con_admin') ?>">
                   <button class="btn btn-deep-purple">Login</button>
+                </a>
                 </div>
 
               </div>
