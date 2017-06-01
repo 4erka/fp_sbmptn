@@ -138,9 +138,7 @@
 
       <script type="text/javascript">
         function ujianketerampilan(){
-          if(document.getElementById('pilihan1').value != 0){
             document.getElementById('formuk').disabled = false;
-          }
         }
       </script>
 
@@ -148,11 +146,11 @@
         <td style="padding-top: 15px;padding-right: 0px">
           PTN tempat anda mengikuti ujian keterampilan
         </td>
+        <input type="button" onclick="ujianketerampilan()" value="Enable">
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
          <form id="formuk">
-         <?php  
-         ?>
+
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
               Ujian Keterampilan Olahraga<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga " disabled="">
             </div>
