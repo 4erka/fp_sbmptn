@@ -70,7 +70,6 @@
               </select>
             </div>
             <div>
-              Isi lokasi ujian terlebih dahulu
             </div>
         </td>
       </tr>
@@ -100,7 +99,6 @@
               </select>
             </div>
             <div>
-              Isi pilihan 1 terlebih dahulu
             </div>
         </td>
       </tr>
@@ -112,7 +110,7 @@
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
             <div class="form-group" style="margin-bottom: 0px"> 
-              <select class="form-control">
+              <select class="form-control" >
               <?php 
                   foreach($ptn as $row)
                   { 
@@ -130,45 +128,115 @@
               </select>
             </div>
             <div>
-              Isi pilihan 2 terlebih dahulu
             </div>
          </form>
         </td>
       </tr>
 
-      <script type="text/javascript">
-        function ujianketerampilan(){
-            document.getElementById('formuk').disabled = false;
-        }
-      </script>
 
       <tr style="border-left: groove;border-right: groove;">
         <td style="padding-top: 15px;padding-right: 0px">
           PTN tempat anda mengikuti ujian keterampilan
         </td>
-        <input type="button" onclick="ujianketerampilan()" value="Enable">
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
-         <form id="formuk">
+         <form>
 
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Olahraga<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga " disabled="">
+              Ujian Keterampilan Olahraga
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input onclick="myFunction()" id="cek" type="checkbox" aria-label="...">
+                </span>
+                  <input type="text" class="form-control" aria-label="..." id="disabledInput" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga " disabled>
+              </div>
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
-              Ujian Keterampilan Senirupa / Desain<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_senirupa_desain" disabled="">
+              Ujian Keterampilan Senirupa / Desain
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input onclick="myFunction2()" id="cek2" type="checkbox" aria-label="...">
+                </span>
+                  <input type="text" class="form-control" id="disabledInput2" placeholder="Pilih Program Studi" name="nama_prodi_senirupa_desain" disabled>
+              </div>
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Sendratari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_Sendratari" disabled="">
+              Ujian Keterampilan Sendratari
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input onclick="myFunction3()" id="cek3" type="checkbox" aria-label="...">
+                </span>
+                  <input type="text" class="form-control" id="disabledInput3" placeholder="Pilih Program Studi" name="nama_prodi_Sendratari" disabled>
+              </div>
             </div>
              <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Seni Musik<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_musik" disabled="">
+              Ujian Keterampilan Seni Musik
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input onclick="myFunction4()" id="cek4" type="checkbox" aria-label="...">
+                </span>
+                  <input type="text" class="form-control" id="disabledInput4" placeholder="Pilih Program Studi" name="nama_prodi_seni_musik" disabled>
+              </div>
             </div>
              <div class="form-group" style="margin-bottom: 0px"> 
-              Ujian Keterampilan Seni Tari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_tari" disabled="">
+              Ujian Keterampilan Seni Tari
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input onclick="myFunction5()" id="cek5" type="checkbox" aria-label="..." >
+                </span>
+
+                
+                  <input type="text" class="form-control" id="disabledInput5" placeholder="Pilih Program Studi" name="nama_prodi_seni_tari" disabled>
+              </div>
             </div>
          </form>
         </td>
       </tr>
+
+      <script>
+      function myFunction(){
+        if (document.getElementById("cek").checked) 
+          document.getElementById("disabledInput").disabled = false;
+        else 
+          document.getElementById("disabledInput").disabled = true;
+        }
+      </script>
+
+      <script>
+      function myFunction2(){
+        if (document.getElementById("cek2").checked) 
+          document.getElementById("disabledInput2").disabled = false;
+        else 
+          document.getElementById("disabledInput2").disabled = true;
+        }
+      </script>
+
+      <script>
+      function myFunction3(){
+        if (document.getElementById("cek3").checked) 
+          document.getElementById("disabledInput3").disabled = false;
+        else 
+          document.getElementById("disabledInput3").disabled = true;
+        }
+      </script>
+
+      <script>
+      function myFunction4(){
+        if (document.getElementById("cek4").checked) 
+          document.getElementById("disabledInput4").disabled = false;
+        else 
+          document.getElementById("disabledInput4").disabled = true;
+        }
+      </script>
+
+      <script>
+      function myFunction5(){
+        if (document.getElementById("cek5").checked) 
+          document.getElementById("disabledInput5").disabled = false;
+        else 
+          document.getElementById("disabledInput5").disabled = true;
+        }
+      </script>
 
       <tr style="border-left: groove;border-right: groove;border-bottom: groove;">  
         <td></td>
@@ -202,7 +270,7 @@
 
       
 
-
+      
 
 
     </div>

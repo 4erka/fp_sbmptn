@@ -186,19 +186,19 @@
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
             <div class="form-group"  style="margin-bottom: 0px"> 
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <div class="checkbox">
                   <label for="Kelamin-0">
-                    <input type="checkbox" name="inp_kelamin" value="1" <?php echo set_checkbox('inp_kelamin', '1'); ?> />
-                    Male
+                    <input type="radio" name="inp_kelamin" id="optionsRadios1" value="1" checked <?php echo set_checkbox('inp_kelamin', '1'); ?> />
+                    Laki laki
                    </label>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-7">
                 <div class="checkbox">
                   <label for="Kelamin-1">
-                    <input type="checkbox" name="inp_kelamin" value="2" <?php echo set_checkbox('inp_kelamin', '2'); ?> />
-                    Female
+                  <input type="radio" name="inp_kelamin" id="optionsRadios2" value="2" <?php echo set_checkbox('inp_kelamin', '2'); ?> />
+                    Perempuan
                   </label>
                 </div>
               </div>
@@ -213,18 +213,18 @@
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
             <div class="form-group"  style="margin-bottom: 0px"> 
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <div class="checkbox">
                   <label for="Kewarganegaraan-0">
-                    <input type="checkbox" name="inp_kewarganegaraan" value="1" <?php echo set_checkbox('inp_kewarganegaraan', '1'); ?> />
+                    <input type="radio" name="inp_kewarganegaraan" id="optionsRadios1" value="1" <?php echo set_checkbox('inp_kewarganegaraan', '1'); ?> />
                     WNI
                    </label>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-7">
                 <div class="checkbox">
                   <label for="Kewarganegaraan-1">
-                    <input type="checkbox" name="inp_kewarganegaraan" value="2" <?php echo set_checkbox('inp_kewarganegaraan', '2'); ?> />
+                    <input type="radio" name="inp_kewarganegaraan" id="optionsRadios2" value="2" <?php echo set_checkbox('inp_kewarganegaraan', '2'); ?> />
                     WNA
                   </label>
                 </div>

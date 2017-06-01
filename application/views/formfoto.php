@@ -8,7 +8,10 @@
 			<div class="col-md-6 col-md-offset-3" style="border-style: solid ;border-width: 1px">
 				<div class="container-fluid " style="margin: 0px;padding: 0px">
 					<div class="row">
-						<div class="col-md-6">
+						<div align="center">
+							<img src="<?php echo base_url("uploads/".$dir); ?>" />
+						</div>
+						<div align="center">
 							<div class="form-group">
     	         	    		<label>Upload Pas Foto</label>
     	         	    		<?php echo form_open_multipart('pendaftaran/do_upload/'.$id);?>
@@ -21,9 +24,7 @@
 							<?php echo $error;?>
 						</div>
 				
-						<div class="col-md-3">
-							<img src="<?php echo base_url("uploads/".$dir); ?>" />
-						</div>
+						
 					</div>
 				</div>
 			</div>
