@@ -155,12 +155,16 @@ class Pendaftaran extends CI_Controller {
         $subpanlok = $this->db->query('SELECT pl_id, spl_id, spl_nama FROM subpanlok ORDER BY spl_id');
         $ptn = $this->db->query('SELECT ptn_id, ptn_nama FROM ptn ORDER BY ptn_id');
         $prodi = $this->db->query('SELECT ptn_id, pro_id, pro_nama, uk_id FROM prodi ORDER BY ptn_id');
+        $ptnuk = $this->db->query('SELECT ptnuk.ptn_id, ptn_nama, ptnuk_jenis, ptnuk_alamat
+            FROM ptnuk
+            INNER JOIN ptn ON ptn.ptn_id = ptnuk.ptn_id');
         $ids = array(
                 'id' => $id,
                 'panlok' => $panlok->result(),
                 'subpanlok' => $subpanlok->result(),
                 'ptn' => $ptn->result(),
-                'prodi' => $prodi->result()
+                'prodi' => $prodi->result(),
+                'ptnuk' => $ptnuk->result()
             );
         if ($query !== FALSE)
         {
@@ -178,8 +182,9 @@ class Pendaftaran extends CI_Controller {
     }
 
     public function form_cetak($id){
-
-        $query = $this->db->query('SELECT pl_nama FROM panlok');
-
+        $spl_id = $this->input->post('inp_subpanlok');
+        $data = array('spl_id' => $spl_id, );
+        $query = $this->db->insert('pilihanpeserta', $data);
+        //$query = $this->db->query('SELECT pl_nama FROM panlok');
     }
 }

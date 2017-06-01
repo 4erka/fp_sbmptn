@@ -14,7 +14,7 @@
          <form>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
               <!-- <input type="text" class="form-control" id="Panlok" placeholder="Panlok" name="Panlok"> -->
-              <select class="form-control">
+              <select class="form-control" name="inp_subpanlok">
               <?php 
                   foreach($panlok as $pl)
                   { 
@@ -40,7 +40,6 @@
                 ?>
               </select>
             </div>
-         </form>
         </td>
       </tr>
 
@@ -148,7 +147,16 @@
                 <span class="input-group-addon">
                   <input onclick="myFunction()" id="cek" type="checkbox" aria-label="...">
                 </span>
-                  <input type="text" class="form-control" aria-label="..." id="disabledInput" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga " disabled>
+                  <select class="form-control" id="disabledInput" disabled>
+                    <?php 
+                        foreach($ptnuk as $row)
+                        { 
+                          if($row->ptnuk_jenis == "OLAHRAGA"){
+                            echo '<option value="'.$row->ptnuk_id.'">'.$row->ptn_nama.'</option>';
+                          }
+                        }
+                    ?>
+                  </select>
               </div>
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
@@ -157,7 +165,16 @@
                 <span class="input-group-addon">
                   <input onclick="myFunction2()" id="cek2" type="checkbox" aria-label="...">
                 </span>
-                  <input type="text" class="form-control" id="disabledInput2" placeholder="Pilih Program Studi" name="nama_prodi_senirupa_desain" disabled>
+                  <select class="form-control" id="disabledInput2" disabled>
+                    <?php 
+                        foreach($ptnuk as $row)
+                        { 
+                          if($row->ptnuk_jenis == "SENI RUPA DAN DESAIN"){
+                            echo '<option value="'.$row->ptnuk_id.'">'.$row->ptn_nama.'</option>';
+                          }
+                        }
+                    ?>
+                  </select>
               </div>
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
@@ -166,7 +183,16 @@
                 <span class="input-group-addon">
                   <input onclick="myFunction3()" id="cek3" type="checkbox" aria-label="...">
                 </span>
-                  <input type="text" class="form-control" id="disabledInput3" placeholder="Pilih Program Studi" name="nama_prodi_Sendratari" disabled>
+                  <select class="form-control" id="disabledInput3" disabled>
+                    <?php 
+                        foreach($ptnuk as $row)
+                        { 
+                          if($row->ptnuk_jenis == "SENDRATASIK"){
+                            echo '<option value="'.$row->ptnuk_id.'">'.$row->ptn_nama.'</option>';
+                          }
+                        }
+                    ?>
+                  </select>
               </div>
             </div>
              <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
@@ -175,7 +201,16 @@
                 <span class="input-group-addon">
                   <input onclick="myFunction4()" id="cek4" type="checkbox" aria-label="...">
                 </span>
-                  <input type="text" class="form-control" id="disabledInput4" placeholder="Pilih Program Studi" name="nama_prodi_seni_musik" disabled>
+                  <select class="form-control" id="disabledInput4" disabled>
+                    <?php 
+                        foreach($ptnuk as $row)
+                        { 
+                          if($row->ptnuk_jenis == "SENI TARI"){
+                            echo '<option value="'.$row->ptnuk_id.'">'.$row->ptn_nama.'</option>';
+                          }
+                        }
+                    ?>
+                  </select>
               </div>
             </div>
              <div class="form-group" style="margin-bottom: 0px"> 
@@ -184,9 +219,16 @@
                 <span class="input-group-addon">
                   <input onclick="myFunction5()" id="cek5" type="checkbox" aria-label="..." >
                 </span>
-
-                
-                  <input type="text" class="form-control" id="disabledInput5" placeholder="Pilih Program Studi" name="nama_prodi_seni_tari" disabled>
+                  <select class="form-control" id="disabledInput5" disabled>
+                    <?php 
+                        foreach($ptnuk as $row)
+                        { 
+                          if($row->ptnuk_jenis == "SENI MUSIK"){
+                            echo '<option value="'.$row->ptnuk_id.'">'.$row->ptn_nama.'</option>';
+                          }
+                        }
+                    ?>
+                  </select>
               </div>
             </div>
          </form>

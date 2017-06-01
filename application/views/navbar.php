@@ -12,7 +12,7 @@
         <ul class="dropdown-menu">
           <li><a href="<?php echo site_url('con_pageinformasi') ?>">Informasi Umum</a></li>
           <li><a href="<?php echo site_url('Daftarptn') ?>">Daftar PTN</a></li>
-          <li><a href="<?php echo site_url('con_daftarptnuk') ?>">Daftar PTN UK</a></li>
+          <li><a href="<?php echo site_url('Daftarptnuk') ?>">Daftar PTN UK</a></li>
           <li><a href="<?php echo site_url('DaftarPanlok') ?>">Daftar Panlok</a></li>
         </ul>
       </li>
