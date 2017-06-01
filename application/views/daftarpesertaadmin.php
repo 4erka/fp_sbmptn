@@ -23,7 +23,6 @@
                                         <td>08987654321</td>
                                         <td>yolo@gmail.com</td>
                                         <td>diterima/tidak</td>
-                                        <td><a href="edit_anggota_lab.html"><button type="submit" class="btn btn-default">Edit</button></a></td>
                                         <td><button type="button" class="btn btn-danger" onclick="myFunction()">Delete</button></td>
                                     </tr>
                                 </tbody>

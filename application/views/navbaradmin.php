@@ -6,7 +6,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="<?php echo site_url('con_daftarpesertaadmin') ?>">Daftar Peserta</a></li>
-      <li><a href="<?php echo site_url('con_daftarpanlokadmin') ?>">Daftar Panlok </a></li>
+      <li><a href="<?php echo site_url('con_PIN') ?>">PIN </a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="<?php echo site_url('con_homepage') ?>"><span class="glyphicon glyphicon-log-out"></span> LOGOUT</a></li>
