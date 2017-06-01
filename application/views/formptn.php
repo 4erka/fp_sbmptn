@@ -50,9 +50,9 @@
         </td>
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
-         <form>
+         <form onclick="ujianketerampilan()">
             <div class="form-group" style="margin-bottom: 0px"> 
-              <select class="form-control">
+              <select class="form-control" id="pilihan1">
               <?php 
                   foreach($ptn as $row)
                   { 
@@ -72,7 +72,6 @@
             <div>
               Isi lokasi ujian terlebih dahulu
             </div>
-         </form>
         </td>
       </tr>
 
@@ -82,7 +81,6 @@
         </td>
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
-         <form>
             <div class="form-group" style="margin-bottom: 0px"> 
               <select class="form-control">
               <?php 
@@ -104,7 +102,6 @@
             <div>
               Isi pilihan 1 terlebih dahulu
             </div>
-         </form>
         </td>
       </tr>
 
@@ -114,7 +111,6 @@
         </td>
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
-         <form>
             <div class="form-group" style="margin-bottom: 0px"> 
               <select class="form-control">
               <?php 
@@ -140,27 +136,37 @@
         </td>
       </tr>
 
+      <script type="text/javascript">
+        function ujianketerampilan(){
+          if(document.getElementById('pilihan1').value != 0){
+            document.getElementById('formuk').disabled = false;
+          }
+        }
+      </script>
+
       <tr style="border-left: groove;border-right: groove;">
         <td style="padding-top: 15px;padding-right: 0px">
           PTN tempat anda mengikuti ujian keterampilan
         </td>
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
-         <form>
+         <form id="formuk">
+         <?php  
+         ?>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Olahraga<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga">
+              Ujian Keterampilan Olahraga<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Perguruan tinggi" name="nama_ptn_olahraga " disabled="">
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
-              Ujian Keterampilan Senirupa / Desain<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_senirupa_desain">
+              Ujian Keterampilan Senirupa / Desain<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_senirupa_desain" disabled="">
             </div>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Sendratari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_Sendratari">
+              Ujian Keterampilan Sendratari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_Sendratari" disabled="">
             </div>
              <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
-              Ujian Keterampilan Seni Musik<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_musik">
+              Ujian Keterampilan Seni Musik<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_musik" disabled="">
             </div>
              <div class="form-group" style="margin-bottom: 0px"> 
-              Ujian Keterampilan Seni Tari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_tari">
+              Ujian Keterampilan Seni Tari<input type="text" class="form-control" id="disabledInput" placeholder="Pilih Program Studi" name="nama_prodi_seni_tari" disabled="">
             </div>
          </form>
         </td>
