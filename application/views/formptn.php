@@ -145,8 +145,7 @@
 
     </table>
   </div>
-
-  
+       
 
   <div class="col-md-12">
       <div class="text-center" style="margin-top: 5px;">
@@ -155,16 +154,11 @@
               <button type="button" class="btn btn-primary" >sebelumnya</button>
             </a>
             <a href="<?php echo site_url('con_formcetak') ?>">
-              <button type="button" class="btn btn-primary" >selesai</button>
+              <button type="button" class="btn btn-primary" >Selesai</button>
             </a>
             
       </div>
       </div>
-
-      
-
-
-
 
     </div>
 </div>
