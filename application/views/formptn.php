@@ -14,29 +14,28 @@
          <form>
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
               <!-- <input type="text" class="form-control" id="Panlok" placeholder="Panlok" name="Panlok"> -->
-              <select class="form-control" id="panlok" onChange="cekSubpanlok(this);">
-                <?php 
-                  foreach($panlok as $row)
+              <select class="form-control">
+              <?php 
+                  foreach($panlok as $pl)
                   { 
-                    echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
-                  }
-                ?>
-              </select>
-            </div>
-
-            <!-- <script type="text/javascript">
-                function cekSubpanlok(elem) {
-                    document.getElementById('subpanlok').disabled = !elem.selectedIndex;
-                  }
-            </script> -->
-
-            <div class="form-group" style="margin-bottom: 0px;"> 
-              <!-- <input type="text" class="form-control" id="subPanlok" placeholder="subPanlok (Kabupaten atau Kota)" name="subPanlok"> -->
-              <select class="form-control" id="subpanlok">
-                <?php 
-                  foreach($subpanlok as $row)
-                  { 
-                    echo '<option value="'.$row->spl_nama.'">'.$row->spl_nama.'</option>';
+                    echo '<optgroup label="'.$pl->pl_nama.'">';
+                    $flag = 1;
+                      foreach($subpanlok as $spl)
+                      { 
+                        if($pl->pl_id == $spl->pl_id){
+                          echo '<option value="'.$spl->spl_id.'">'.$spl->spl_nama.'</option>';
+                          $flag=1;
+                        }
+                        else{
+                          $flag = 0;
+                        }
+                      }
+                    if($flag == 0)
+                    {
+                      echo '<option value="'.$pl->pl_id.'">'.$pl->pl_nama.'</option>';
+                    }
+                    echo '</optgroup>';
+                    //echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
                   }
                 ?>
               </select>
@@ -53,10 +52,22 @@
         <td style="padding-left: 0px">
          <form>
             <div class="form-group" style="margin-bottom: 0px"> 
-              <input type="text" class="form-control" id="nama_ptn" placeholder="Pilih Perguruan tinggi" name="nama_ptn">
-            </div>
-            <div class="form-group" style="margin-bottom: 0px"> 
-              <input type="text" class="form-control" id="nama_prodi" placeholder="Pilih Program Studi" name="nama_prodi">
+              <select class="form-control">
+              <?php 
+                  foreach($ptn as $row)
+                  { 
+                    echo '<optgroup label="'.$row->ptn_nama.'">';
+                      foreach($prodi as $pro)
+                      { 
+                        if($row->ptn_id == $pro->ptn_id){
+                          echo '<option value="'.$pro->pro_id.'">'.$pro->pro_nama.'</option>';
+                        }
+                      }
+                    echo '</optgroup>';
+                    //echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
+                  }
+                ?>
+              </select>
             </div>
             <div>
               Isi lokasi ujian terlebih dahulu
@@ -73,10 +84,22 @@
         <td style="padding-left: 0px">
          <form>
             <div class="form-group" style="margin-bottom: 0px"> 
-              <input type="text" class="form-control" id="nama_ptn" placeholder="Pilih Perguruan tinggi" name="nama_ptn">
-            </div>
-            <div class="form-group" style="margin-bottom: 0px"> 
-              <input type="text" class="form-control" id="nama_prodi" placeholder="Pilih Program Studi" name="nama_prodi">
+              <select class="form-control">
+              <?php 
+                  foreach($ptn as $row)
+                  { 
+                    echo '<optgroup label="'.$row->ptn_nama.'">';
+                      foreach($prodi as $pro)
+                      { 
+                        if($row->ptn_id == $pro->ptn_id){
+                          echo '<option value="'.$pro->pro_id.'">'.$pro->pro_nama.'</option>';
+                        }
+                      }
+                    echo '</optgroup>';
+                    //echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
+                  }
+                ?>
+              </select>
             </div>
             <div>
               Isi pilihan 1 terlebih dahulu
@@ -93,10 +116,22 @@
         <td style="padding-left: 0px">
          <form>
             <div class="form-group" style="margin-bottom: 0px"> 
-              <input type="text" class="form-control" id="nama_ptn" placeholder="Pilih Perguruan tinggi" name="nama_ptn">
-            </div>
-            <div class="form-group" style="margin-bottom: 0px"> 
-              <input type="text" class="form-control" id="nama_prodi" placeholder="Pilih Program Studi" name="nama_prodi">
+              <select class="form-control">
+              <?php 
+                  foreach($ptn as $row)
+                  { 
+                    echo '<optgroup label="'.$row->ptn_nama.'">';
+                      foreach($prodi as $pro)
+                      { 
+                        if($row->ptn_id == $pro->ptn_id){
+                          echo '<option value="'.$pro->pro_id.'">'.$pro->pro_nama.'</option>';
+                        }
+                      }
+                    echo '</optgroup>';
+                    //echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
+                  }
+                ?>
+              </select>
             </div>
             <div>
               Isi pilihan 2 terlebih dahulu
