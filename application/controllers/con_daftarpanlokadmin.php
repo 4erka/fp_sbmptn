@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class con_admin extends CI_Controller {
+class con_daftarpanlokadmin extends CI_Controller {
 
 	public function __construct()
 	{
@@ -13,7 +13,7 @@ class con_admin extends CI_Controller {
 	{
 		$this->load->view('header');
 		$this->load->view('navbaradmin');
-		$this->load->view('admin');
+		$this->load->view('daftarpanlokadmin');
 		$this->load->view('footer');
 	}
 

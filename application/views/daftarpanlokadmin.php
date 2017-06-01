@@ -1,6 +1,6 @@
 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
-                        <h2 align="center">Daftar Peserta</h2>
+                        <h2 align="center">Daftar Panlok</h2>
                         <div class="table-responsive">
                             <table class="table table-hover table-striped">
                                 <thead>
