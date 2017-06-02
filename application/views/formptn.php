@@ -11,7 +11,10 @@
         </td>
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
-         <form>
+         <?php
+        // Open form and set URL for submit form
+        echo form_open('pendaftaran/form_ptn_submit/'.$id[0]);?>
+
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px"> 
               <!-- <input type="text" class="form-control" id="Panlok" placeholder="Panlok" name="Panlok"> -->
               <select class="form-control" name="inp_subpanlok">
@@ -32,7 +35,7 @@
                       }
                     if($flag == 0)
                     {
-                      echo '<option value="'.$pl->pl_id.'">'.$pl->pl_nama.'</option>';
+                      echo '<option value="0">'.$pl->pl_nama.'</option>';
                     }
                     echo '</optgroup>';
                     //echo '<option value="'.$row->pl_nama.'">'.$row->pl_nama.'</option>';
@@ -49,9 +52,8 @@
         </td>
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
-         <form onclick="ujianketerampilan()">
             <div class="form-group" style="margin-bottom: 0px"> 
-              <select class="form-control" id="pilihan1">
+              <select class="form-control" id="pilihan1" name="inp_pil1">
               <?php 
                   foreach($ptn as $row)
                   { 
@@ -80,7 +82,7 @@
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
             <div class="form-group" style="margin-bottom: 0px"> 
-              <select class="form-control">
+              <select class="form-control" name="inp_pil2">
               <?php 
                   foreach($ptn as $row)
                   { 
@@ -109,7 +111,7 @@
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
             <div class="form-group" style="margin-bottom: 0px"> 
-              <select class="form-control" >
+              <select class="form-control" name="inp_pil3">
               <?php 
                   foreach($ptn as $row)
                   { 
@@ -128,7 +130,6 @@
             </div>
             <div>
             </div>
-         </form>
         </td>
       </tr>
 
@@ -139,15 +140,13 @@
         </td>
         <td style="padding-top: 15px;">:</td>
         <td style="padding-left: 0px">
-         <form>
-
             <div class="form-group" style="margin-bottom: 0px;padding-bottom: 20px""> 
               Ujian Keterampilan Olahraga
               <div class="input-group">
                 <span class="input-group-addon">
                   <input onclick="myFunction()" id="cek" type="checkbox" aria-label="...">
                 </span>
-                  <select class="form-control" id="disabledInput" disabled>
+                  <select class="form-control" id="disabledInput" disabled name="inp_uk1">
                     <?php 
                         foreach($ptnuk as $row)
                         { 
@@ -165,7 +164,7 @@
                 <span class="input-group-addon">
                   <input onclick="myFunction2()" id="cek2" type="checkbox" aria-label="...">
                 </span>
-                  <select class="form-control" id="disabledInput2" disabled>
+                  <select class="form-control" id="disabledInput2" disabled name="inp_uk2">
                     <?php 
                         foreach($ptnuk as $row)
                         { 
@@ -183,7 +182,7 @@
                 <span class="input-group-addon">
                   <input onclick="myFunction3()" id="cek3" type="checkbox" aria-label="...">
                 </span>
-                  <select class="form-control" id="disabledInput3" disabled>
+                  <select class="form-control" id="disabledInput3" disabled name="inp_uk3">
                     <?php 
                         foreach($ptnuk as $row)
                         { 
@@ -201,7 +200,7 @@
                 <span class="input-group-addon">
                   <input onclick="myFunction4()" id="cek4" type="checkbox" aria-label="...">
                 </span>
-                  <select class="form-control" id="disabledInput4" disabled>
+                  <select class="form-control" id="disabledInput4" disabled name="inp_uk4">
                     <?php 
                         foreach($ptnuk as $row)
                         { 
@@ -219,7 +218,7 @@
                 <span class="input-group-addon">
                   <input onclick="myFunction5()" id="cek5" type="checkbox" aria-label="..." >
                 </span>
-                  <select class="form-control" id="disabledInput5" disabled>
+                  <select class="form-control" id="disabledInput5" disabled name="inp_uk5">
                     <?php 
                         foreach($ptnuk as $row)
                         { 
@@ -231,7 +230,6 @@
                   </select>
               </div>
             </div>
-         </form>
         </td>
       </tr>
 
@@ -285,10 +283,12 @@
         <td></td>  
         <td>  
           <button type="button" class="btn btn-primary" >Hapus</button>
-          <button type="button" class="btn btn-primary" >Simpan</button> 
+          <button type="submit" class="btn btn-primary" >Simpan</button>
         </td>  
       </tr>  
-  
+    <?php
+          // close form 
+          echo form_close();?>
     </div>
       
 
@@ -300,21 +300,15 @@
   <div class="col-md-12">
       <div class="text-center" style="margin-top: 5px;">
           
-          <a href="<?php echo site_url('con_formfoto') ?>">
+          <a href="<?php echo site_url('pendaftaran/form_biodata/').$id[0] ?>">
               <button type="button" class="btn btn-primary" >sebelumnya</button>
             </a>
-            <a href="<?php echo site_url('con_formcetak') ?>">
+            <a href="<?php echo site_url('pendaftaran/form_cetak/'.$id[0]) ?>">
               <button type="button" class="btn btn-primary" >selesai</button>
             </a>
             
       </div>
       </div>
-
-      
-
-      
-
-
     </div>
 </div>
 

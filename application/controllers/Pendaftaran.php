@@ -6,10 +6,6 @@ class Pendaftaran extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-        // $this->load->model("pendaftaran_model", "pendaftaran");
-        // if(!empty($_SESSION['kap_id']))
-        //     redirect('pendaftaran');
-		parent::__construct();
 		$this->load->helper('url');
         $this->load->helper('form');
         $this->load->database();
@@ -22,7 +18,6 @@ class Pendaftaran extends CI_Controller {
 		$this->load->view('footer');
     }
 
-    // When user submit data on view page, Then this function store data in array.
     public function form_foto() {
         $kap_kode = $this->input->post('inp_kap_kode');
         $kap_pin = $this->input->post('inp_kap_pin');
@@ -155,7 +150,7 @@ class Pendaftaran extends CI_Controller {
         $subpanlok = $this->db->query('SELECT pl_id, spl_id, spl_nama FROM subpanlok ORDER BY spl_id');
         $ptn = $this->db->query('SELECT ptn_id, ptn_nama FROM ptn ORDER BY ptn_id');
         $prodi = $this->db->query('SELECT ptn_id, pro_id, pro_nama, uk_id FROM prodi ORDER BY ptn_id');
-        $ptnuk = $this->db->query('SELECT ptnuk.ptn_id, ptn_nama, ptnuk_jenis, ptnuk_alamat
+        $ptnuk = $this->db->query('SELECT ptnuk.ptn_id, ptn_nama, ptnuk_jenis, ptnuk_alamat, ptnuk_id
             FROM ptnuk
             INNER JOIN ptn ON ptn.ptn_id = ptnuk.ptn_id');
         $ids = array(
@@ -181,10 +176,80 @@ class Pendaftaran extends CI_Controller {
         }
     }
 
-    public function form_cetak($id){
+    public function form_ptn_submit($id){
         $spl_id = $this->input->post('inp_subpanlok');
-        $data = array('spl_id' => $spl_id, );
+        //echo $spl_id;
+        $pilihan1 = $this->input->post('inp_pil1');
+        $pilihan2 = $this->input->post('inp_pil2');
+        $pilihan3 = $this->input->post('inp_pil3');
+        $ujianket_or = $this->input->post('inp_uk1');
+        $ujianket_sendes = $this->input->post('inp_uk2');
+        $ujianket_sen = $this->input->post('inp_uk3');
+        $ujianket_senmus = $this->input->post('inp_uk4');
+        $ujianket_senta = $this->input->post('inp_uk5');
+        $data = array(
+            'spl_id' => $spl_id, 
+            'pilihan1' => $pilihan1,
+            'pilihan2' => $pilihan2,
+            'pilihan3' => $pilihan3,
+            'ujianket_or' => $ujianket_or,
+            'ujianket_sendes' => $ujianket_sendes,
+            'ujianket_sen' => $ujianket_sen,
+            'ujianket_senmus' => $ujianket_senmus,
+            'ujianket_senta' => $ujianket_senta,
+            'ps_id' => $id
+            );
+        $ids = array(
+            'id' => $spl_id,
+            );
         $query = $this->db->insert('pilihanpeserta', $data);
+        if ($query !== FALSE)
+        {
+            $this->load->view('header');
+            $this->load->view('navbar');
+            $this->load->view('formptn', $ids);
+            $this->load->view('footer');
+        }
+        else {
+            $this->load->view('header');
+            $this->load->view('navbar');
+            $this->load->view('formptn', $ids);
+            $this->load->view('footer');
+        }
         //$query = $this->db->query('SELECT pl_nama FROM panlok');
+    }
+
+    public function form_cetak($id){
+        $query = $this->db->query('SELECT* FROM peserta WHERE ps_id = '.$id);
+        $pilihan = $this->db->query('SELECT* FROM pilihanpeserta where ps_id = '.$id);
+        foreach ($pilihan->result_array() as $row)
+        {
+            $pilihan1 = $row['pilihan1'];
+            $pilihan2 = $row['pilihan2'];
+            $pilihan3 = $row['pilihan3'];
+        }
+        $univ1 = $this->db->query('SELECT ptn_nama, pro_nama, pro_id
+            FROM prodi
+            INNER JOIN ptn ON ptn.ptn_id = prodi.ptn_id
+            WHERE pro_id = '.$pilihan1);
+        $univ2 = $this->db->query('SELECT ptn_nama, pro_nama, pro_id
+            FROM prodi
+            INNER JOIN ptn ON ptn.ptn_id = prodi.ptn_id
+            WHERE pro_id = '.$pilihan2);
+        $univ3 = $this->db->query('SELECT ptn_nama, pro_nama, pro_id
+            FROM prodi
+            INNER JOIN ptn ON ptn.ptn_id = prodi.ptn_id
+            WHERE pro_id = '.$pilihan3);
+        $ids = array(
+                'id' => $id,
+                'peserta' => $query->result(),
+                'univ1' => $univ1->result(),
+                'univ2' => $univ2->result(),
+                'univ3' => $univ3->result(),
+                );
+        // $this->load->view('header');
+        // $this->load->view('navbar');
+        $this->load->view('formcetak', $ids);
+        // $this->load->view('footer');
     }
 }
