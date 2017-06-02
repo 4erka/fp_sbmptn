@@ -15,9 +15,9 @@
           <li><a href="<?php echo site_url('Daftarptnuk') ?>">Daftar PTN UK</a></li>
           <li><a href="<?php echo site_url('DaftarPanlok') ?>">Daftar Panlok</a></li>
         </ul>
-      </li>
-      
+      </li>   
       <li><a href="<?php echo site_url('pendaftaran') ?>">Pendaftaran</a></li>
+      <li><a href="<?php echo site_url('con_pengumuman') ?>">Pengumuman</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> ADMIN</a></li>
