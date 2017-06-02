@@ -425,8 +425,7 @@
         <td></td>
         <td></td>  
         <td>  
-          <button type="button" class="btn btn-primary" >Hapus</button>
-          <button type="button" class="btn btn-primary" >Simpan</button> 
+          <button type="submit" class="btn btn-primary" >Simpan</button> 
         </td>  
       </tr>  
   
